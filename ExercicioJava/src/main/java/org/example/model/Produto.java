@@ -1,18 +1,14 @@
 package org.example.model;
 
 public class Produto {
+
     private int id;
-
     private String nome;
-
     private double preco;
-
     private int quantidade;
-
     private String categoria;
 
     public Produto(){
-
     }
 
     public Produto(String nome, double preco, int quantidade, String categoria) {
@@ -69,4 +65,5 @@ public class Produto {
     public void setCategoria(String categoria) {
         this.categoria = categoria;
     }
+
 }

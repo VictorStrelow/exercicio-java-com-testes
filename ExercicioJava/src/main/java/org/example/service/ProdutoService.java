@@ -15,4 +15,5 @@ public interface ProdutoService {
     Produto atualizarProduto(Produto produto, int id) throws SQLException;
 
     boolean excluirProduto(int id) throws SQLException;
+
 }

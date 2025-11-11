@@ -1,0 +1,7 @@
+org\example\service\ProdutoService.class
+org\example\Main.class
+org\example\repository\ProdutoRepositoryImpl.class
+org\example\model\Produto.class
+org\example\util\ConexaoBanco.class
+org\example\service\ProdutoServiceImpl.class
+org\example\repository\ProdutoRepository.class
