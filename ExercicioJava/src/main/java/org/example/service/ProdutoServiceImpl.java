@@ -10,9 +10,9 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.List;
 
-public class ProdutoServiceImpl implements ProdutoService{
+public class ProdutoServiceImpl implements ProdutoService {
 
-    private final ProdutoRepository repository;
+    private ProdutoRepository repository;
 
     public ProdutoServiceImpl() {
         this.repository = new ProdutoRepositoryImpl();
@@ -23,7 +23,6 @@ public class ProdutoServiceImpl implements ProdutoService{
         if (produto.getPreco() <= 0) {
             throw new IllegalArgumentException("Preço deve ser positivo.");
         }
-
         return repository.save(produto);
     }
 
@@ -46,7 +45,7 @@ public class ProdutoServiceImpl implements ProdutoService{
 
     @Override
     public boolean excluirProduto(int id) throws SQLException {
-        final String query = "DELETE FROM produto WHERE id = ?";
+        String query = "DELETE FROM produto WHERE id = ?";
 
         try (Connection conn = ConexaoBanco.conectar();
              PreparedStatement ps = conn.prepareStatement(query)) {
